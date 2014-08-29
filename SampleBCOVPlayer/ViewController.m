@@ -26,8 +26,6 @@ static void *kPlaybackLikelyToKeepUpContext = &kPlaybackLikelyToKeepUpContext;
 
 @interface ViewController ()
 
-@property (nonatomic, assign) BOOL adIsPlaying;
-@property (nonatomic, assign) BOOL isBrowserOpen;
 @property (nonatomic, strong) BCOVCatalogService *catalogService;
 @property (nonatomic, weak) id<BCOVPlaybackSession> currentPlaybackSession;
 @property (nonatomic, strong) id<BCOVPlaybackController> playbackController;
@@ -89,9 +87,6 @@ static void *kPlaybackLikelyToKeepUpContext = &kPlaybackLikelyToKeepUpContext;
 
 -(void)setup
 {
-    self.adIsPlaying = NO;
-    self.isBrowserOpen = NO;
-
     BCOVPlayerSDKManager *playbackManager = [BCOVPlayerSDKManager sharedManager];
     
     
